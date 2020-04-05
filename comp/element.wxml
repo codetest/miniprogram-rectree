@@ -1,0 +1,5 @@
+<block wx:for="{{nodes}}" wx:key="inx">
+  <image wx:if="{{item.type == 1}}" src="{{item.src}}"></image>
+  <span wx:if="{{item.type == 2}}">{{item.text}}</span>
+  <element wx:if="{{item.type == 0}}" nodes="{{item.nodes}}"></element>
+</block>
