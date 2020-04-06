@@ -1,0 +1,7 @@
+<view catchtap="wholeClick" style="{{view.style ? view.style : ''}}" data-nodeid="{{view.id}}" class="{{view.classNames ? view.classNames : ''}}">
+  <block wx:for="{{view.nodes}}" wx:key="inx">
+    <image wx:if="{{item.type == 1}}" src="{{item.src}}" bindtap="click"  data-nodeid="{{item.id}}" style="{{item.style ? item.style : ''}}" class="{{item.classNames ? item.class : ''}}"></image>
+    <span wx:if="{{item.type == 2}}" style="{{item.style ? item.style : ''}}" bindtap="click"  data-nodeid="{{item.id}}" class="{{item.classNames ? item.classNames : ''}}">{{item.text}}</span>
+    <element wx:if="{{item.type == 0}}" view="{{item.view}}" data-nodeid="{{item.id}}"></element>
+  </block>
+</view>

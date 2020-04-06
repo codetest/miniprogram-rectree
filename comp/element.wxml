@@ -1,7 +1,0 @@
-<view style="{{view.style ? view.style : ''}}" class="red" class="{{view.class ? view.class : ''}}">
-  <block wx:for="{{view.nodes}}" wx:key="inx">
-    <image wx:if="{{item.type == 1}}" src="{{item.src}}" style="{{item.style ? item.style : ''}}" class="{{view.class ? view.class : ''}}"></image>
-    <span wx:if="{{item.type == 2}}" style="{{item.style ? item.style : ''}}" class="{{item.class ? item.class : ''}}">{{item.text}}</span>
-    <element wx:if="{{item.type == 0}}" view="{{item.view}}"></element>
-  </block>
-</view>
