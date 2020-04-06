@@ -4,8 +4,8 @@ Component({
    * Component properties
    */
   properties: {
-    nodes: {
-      type: Array
+    view: {
+      type: Object
     }
   },
 
@@ -15,10 +15,13 @@ Component({
   data: {
   },
 
+  options: {
+    addGlobalClass: true,
+  },
+
   /**
    * Component methods
    */
   attached() {
-    console.log(this.data)
   }
 })

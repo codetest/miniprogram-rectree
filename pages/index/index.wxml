@@ -1,1 +1,1 @@
-<element nodes="{{nodes}}"/>
+<element view="{{view}}"/>
