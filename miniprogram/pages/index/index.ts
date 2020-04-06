@@ -1,11 +1,6 @@
 import {View, IdGenerator} from "../../model/View"
-import { MyEvent } from "../../model/MyEvent"
 var localView: View = {
   id: IdGenerator.NextId(),
-  classNames: "red",
-  tapCallback: function(_:MyEvent){
-    console.log("top level node clicked")
-  },
   nodes: [
     {
       id: IdGenerator.NextId(),
@@ -16,7 +11,6 @@ var localView: View = {
       id: IdGenerator.NextId(),
       type: 2,
       text: "测试开发",
-      style: "font-size:20rpx;"
     },
     {
       id: IdGenerator.NextId(),
@@ -25,19 +19,9 @@ var localView: View = {
         id: IdGenerator.NextId(),
         nodes: [
           {
-            classNames: "green",
             type: 2,
             text: "测试开发2",
-            style: "font-size:30rpx;",
             id: IdGenerator.NextId(),
-            tapCallback: function(_: MyEvent){
-              if (this.classNames == "green"){
-                this.classNames = "red"
-              }
-              else {
-                this.classNames = "green"
-              }
-            }
           }
         ]
       }
