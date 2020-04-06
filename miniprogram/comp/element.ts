@@ -20,6 +20,7 @@ Component({
             var localView: View = <View>this.data.view
             if (localView.tapCallback){
                 localView.tapCallback.apply(localView, [myevent])
+                this.setData({view: localView})
             }
         },
         click: function(myevent: MyEvent){

@@ -3,7 +3,6 @@ export interface MyEvent{
     timeStamp: number,
     detail: any,
     target: MyEventTarget,
-    curreentTarget: MyEventTarget,
 }
 
 export interface MyEventTarget{
